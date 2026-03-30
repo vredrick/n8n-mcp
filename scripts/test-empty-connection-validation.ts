@@ -36,7 +36,7 @@ async function testValidation() {
     "connections": {},
     "pinData": {},
     "meta": {
-      "instanceId": "74e11c77e266f2c77f6408eb6c88e3fec63c9a5d8c4a3a2ea4c135c542012d6b"
+      "instanceId": "test-instance-id"
     }
   };
 

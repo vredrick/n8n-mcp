@@ -7,8 +7,13 @@ import { config } from 'dotenv';
 config();
 
 async function debugN8nAuth() {
-  const apiUrl = process.env.N8N_API_URL || 'https://n8n.energyhouse.com.pl';
-  const apiKey = process.env.N8N_API_KEY || 'n8n_api_f94c0b3fb3bf1a3a690f37bb0c5c0de43c7b690c0a33c88b6baaa37ae896dc96';
+  const apiUrl = process.env.N8N_API_URL;
+  const apiKey = process.env.N8N_API_KEY;
+
+  if (!apiUrl || !apiKey) {
+    console.error('N8N_API_URL and N8N_API_KEY environment variables are required');
+    process.exit(1);
+  }
   
   console.log('Testing n8n API Authentication...');
   console.log('API URL:', apiUrl);
